@@ -759,3 +759,20 @@ function browserInfo(type) {
             return navigator.userAgent.toLowerCase()
     }
 }
+
+/**
+ * 功能：判断时间格式
+ * @param dateString 时间
+ * @returns 正确没反应，不正确有提示
+ */
+// var data = '2017-11-21'
+// isDate(data)
+function isDate(dateString) {
+    if (dateString.trim() == "") return true;
+    //年月日正则表达式
+    var r = dateString.match(/^(\d{1,4})(-)(\d{1,2})\2(\d{1,2})$/);
+    if (r == null) {
+        alert("请输入格式正确的日期\n\r日期格式：yyyy-mm-dd\n\r例    如：2008-08-08\n\r");
+        return;
+    }
+};
